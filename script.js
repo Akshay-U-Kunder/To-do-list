@@ -43,6 +43,10 @@ document.addEventListener("DOMContentLoaded", () => {
         saveTasks()
       })
       taskList.appendChild(taskItem)
+
+      let span = document.createElement("span")
+      span.innerHTML = "\u00d7"
+      taskItem.appendChild(span)
     })
   }
 
