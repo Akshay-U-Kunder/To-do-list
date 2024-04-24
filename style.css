@@ -1,3 +1,6 @@
+body {
+  font-family: sans-serif;
+}
 *{
   margin: 0;
   padding: 0;
@@ -18,17 +21,18 @@
   padding: 40px 30px 70px;
   border-radius: 10px;
 }
-.todo-app h2{
+.todo-app h1{
   color: #002765;
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-bottom: 20px;
 }
-.todo-app h2 img{
+.todo-app h1 img{
   width: 30px;
   margin-left: 10px;
 }
-.row{
+.input-container{
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -36,23 +40,20 @@
   border-radius: 30px;
   padding-left: 20px;
   margin-bottom: 25px;
+  
 }
 input{
-  flex: 1;
-  border: none;
-  outline: none;
-  background: transparent;
-  padding: 10px;
+  padding: 11px 120px 11px 80px;
+  margin-bottom: 20px; 
+  text-indent: 0%;
+  text-align: left;
 }
-button{
-  border: none;
+#add-task-btn{
+  border: 1px solid black;
   outline: none;
-  padding: 16px 50px;
-  background: #ff5945;
-  color: #fff;
+  padding: 10px 10px;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 40px;
 }
 ul li{
   list-style: none;
@@ -74,14 +75,32 @@ ul li::before{
   top : 12px;
   left: 8px;
 }
-ul li.checked{
-  color: #555;
+.completed {
   text-decoration: line-through;
+  color: #555;
 }
-ul li.checked::before{
+ul li.completed::before{
   background-image: url(images/checked.png);
 }
-ul li span{
+#filter-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 8px 12px 50px;
+}
+#filter-container button {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  
+} 
+
+
+
+
+
+/* ul li span{
   position: absolute;
   right: 0;
   top: 5px;
@@ -96,4 +115,4 @@ ul li span{
 ul li span:hover{
   background: #edeef0;
 
-}
+} */

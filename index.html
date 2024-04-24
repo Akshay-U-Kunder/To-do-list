@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>To-Do List Application</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-  <div class="todo-app">
-    <h2>To-Do List <img src="images/icon.png"></h2>
-    <div class="row">
-      <input type="text" id="input-box" placeholder="Add your text">
-      <button onclick="addTask()">Add</button>
+    <div class="container">
+      <div class="todo-app">
+        <h1>To-Do List<img src="images/icon.png"></h1>
+        <div id="input-container">
+            <input type="text" id="task-input" placeholder="Enter a task...">
+            <button id="add-task-btn">Add Task</button>
+        </div>
+        <ul id="task-list"></ul>
+      </div>
+        <div id="filter-container">
+            <button id="filter-all">All</button>
+            <button id="filter-active">Active</button>
+            <button id="filter-completed">Completed</button>
+            <button id="clear-completed">Clear Completed</button>
+        </div>
     </div>
-    <ul id="list-container">
-      <!-- <li class="checked">Task 1</li>
-      <li>Task 2</li>
-      <li>Task 3</li> -->
-    </ul>
-  </div>
-</div>
-<script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
