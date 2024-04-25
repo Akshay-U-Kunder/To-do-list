@@ -45,8 +45,14 @@ document.addEventListener("DOMContentLoaded", () => {
       taskList.appendChild(taskItem)
 
       let span = document.createElement("span")
+      span.classList.add("close")
       span.innerHTML = "\u00d7"
       taskItem.appendChild(span)
+
+      span.addEventListener("click", (event) => {
+        event.stopPropagation() // Prevent the li click event from firing
+        deleteTask(index)
+    })
     })
   }
 
