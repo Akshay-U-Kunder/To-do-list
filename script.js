@@ -17,7 +17,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Add new task
-  addTaskButton.addEventListener("click", () => {
+  addTaskButton.addEventListener("click", addTask)
+
+  // Listen for Enter key press on task input
+  taskInput.addEventListener("keypress", function (e) {
+    if (e.key === "Enter") {
+      addTask()
+    }
+  })
+
+  function addTask() {
     const taskText = taskInput.value.trim()
     if (taskText !== "") {
       tasks.push({ text: taskText, completed: false })
@@ -25,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
       saveTasks()
       taskInput.value = ""
     }
-  })
+  }
 
   // Render tasks
   function renderTasks() {
@@ -52,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
       span.addEventListener("click", (event) => {
         event.stopPropagation() // Prevent the li click event from firing
         deleteTask(index)
-    })
+      })
     })
   }
 
