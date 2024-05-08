@@ -43,10 +43,15 @@ body {
   
 }
 input{
-  padding: 11px 120px 11px 80px;
+  /* padding: 11px 120px 11px 80px;
+  margin-bottom: 20px; 
+  text-indent: 0%;
+  text-align: left; */
+  padding: 11px 10px; 
   margin-bottom: 20px; 
   text-indent: 0%;
   text-align: left;
+  width: calc(100% - 100px);
 }
 #add-task-btn{
   border: 1px solid black;
@@ -58,10 +63,14 @@ input{
 ul li{
   list-style: none;
   font-size: 17px;
-  padding: 12px 8px 12px 50px;
+  padding: 11px 40px 11px 80px;
   user-select: none;
+  margin-bottom: 10px;
   cursor: pointer;
   position: relative;
+  text-indent: 0%;
+  text-align: left;
+  word-wrap: break-word; 
 }
 ul li::before{
   content: '';
